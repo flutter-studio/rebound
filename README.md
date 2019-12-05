@@ -4,7 +4,7 @@ English | [简体中文](./README_zh-CN.md)
 
 [![pub package](https://img.shields.io/pub/v/flutter_rebound.svg)](https://pub.dartlang.org/packages/flutter_rebound)
 
-A Flutter library that models spring dynamics and adds real world physics to your app.
+A Flutter library that models spring dynamics and adds real world physics to your app. inspired by Facebook [Rebound](https://github.com/facebook/rebound)
 
 ## Usage
 To use this plugin, add `flutter_rebound` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
