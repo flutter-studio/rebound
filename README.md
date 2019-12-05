@@ -34,8 +34,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     system = SpringSystem(vsync: this);
-    spring =
-        system.createSpringWithConfig(SpringConfig(tension: 40, friction: 3));
+    spring = system.createSpring(40, 3);
     spring.addUpdateListener((spring) {
       double value = spring.currentValue;
       _scale = 1 - value * 0.5;
