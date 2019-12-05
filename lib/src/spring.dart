@@ -9,10 +9,13 @@ class Spring {
   Spring({SpringSystem system})
       : _system = system,
         _id = 's${Spring.__id++}';
-
+  // 弹簧系统实例
   final SpringSystem _system;
+  // 弹簧Spring对应的ID
   String _id;
+  // 弹框的配置
   SpringConfig springConfig;
+  // 弹簧是否已经闲置
   bool _wasAtRest = true;
   double displacementFromRestThreshold = 0.001;
   double restSpeedThreshold = 0.001;
@@ -156,6 +159,9 @@ class Spring {
       position += dxdt * Spring.solverTimeStepSec;
       velocity += dvdt * Spring.solverTimeStepSec;
     }
+
+    _tempState.position = tempPosition;
+    _tempState.velocity = tempVelocity;
 
     this._currentState.position = position;
     this._currentState.velocity = velocity;

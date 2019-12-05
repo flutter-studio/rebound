@@ -94,7 +94,13 @@ class SpringSystem {
     }
   }
 
-  void _tick(Duration duration) => advance(deltaTime: 16.33);
+  void _tick(Duration duration) {
+    advance(deltaTime: 16.67);
+    if (_activeSprings.isEmpty) {
+      this._isIdle = true;
+      _ticker?.stop();
+    }
+  }
 
   // 移除所有的spring的监听
   void _removeAllSpringListeners() {

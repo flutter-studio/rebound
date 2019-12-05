@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rebound/rebound.dart';
+import 'package:flutter_rebound/flutter_rebound.dart';
 
 void main() => runApp(MyApp());
 
@@ -44,14 +44,12 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     system = SpringSystem(vsync: this);
-    spring =
-        system.createSpringWithConfig(SpringConfig(tension: 40, friction: 3));
+    spring = system.createSpring(40, 3);
     spring.addUpdateListener((spring) {
       double value = spring.currentValue;
-      _scale = 1 - value * 0.5;
+      _scale = mapValueFromRangeToRange(value, 0, -1, 1, 0.5);
       setState(() {});
     });
-    spring.endValue = 1;
   }
 
   @override
@@ -67,15 +65,36 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Transform.scale(
-          scale: _scale,
-          child: Container(
-            width: 200,
-            height: 200,
-            color: Colors.red,
+        child: GestureDetector(
+          onTapDown: (e) {
+            spring.endValue = -1;
+          },
+          onTapUp: (_) {
+            spring.endValue = 0;
+          },
+          child: Transform.scale(
+            scale: _scale,
+            child: Container(
+              width: 200,
+              height: 200,
+              color: Colors.red,
+            ),
           ),
         ),
       ),
     );
   }
+}
+
+double mapValueFromRangeToRange(
+  value,
+  fromLow,
+  fromHigh,
+  toLow,
+  toHigh,
+) {
+  var fromRangeSize = fromHigh - fromLow;
+  var toRangeSize = toHigh - toLow;
+  var valueScale = (value - fromLow) / fromRangeSize;
+  return toLow + valueScale * toRangeSize;
 }
