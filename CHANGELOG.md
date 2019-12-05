@@ -1,3 +1,8 @@
+## 0.3.0
+
+* fix some bugs
+
+
 ## 0.2.0
 
 * To optimize the system
