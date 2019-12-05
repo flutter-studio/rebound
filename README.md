@@ -6,6 +6,10 @@ English | [简体中文](./README_zh-CN.md)
 
 A Flutter library that models spring dynamics and adds real world physics to your app. inspired by Facebook [Rebound](https://github.com/facebook/rebound)
 
+<div align=left>
+<img src="https://github.com/flutter-studio/rebound/blob/master/SVID_20191205_120702_1.gif" width = "280"  alt="图片名称" align=center />
+  </div>
+  
 ## Usage
 To use this plugin, add `flutter_rebound` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
 
