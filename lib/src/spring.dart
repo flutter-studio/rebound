@@ -197,7 +197,14 @@ class Spring {
     this.notifyPositionUpdated(notifyActivate, notifyAtRest);
   }
 
-  setCurrentValue(currentValue, bool skipSetAtRest) {
+  // 用于连锁动画
+  chain(Spring parent){
+    parent.addUpdateListener((spring){
+      endValue = spring.currentValue;
+    });
+  }
+
+  setCurrentValue(double currentValue,{ bool skipSetAtRest = false}) {
     _startValue = currentValue;
     _currentState.position = currentValue;
     if (!skipSetAtRest) {

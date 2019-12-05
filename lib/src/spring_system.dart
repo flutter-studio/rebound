@@ -1,11 +1,11 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'spring.dart';
 import 'spring_config.dart';
 
 ///
 class SpringSystem {
-  SpringSystem({TickerProviderStateMixin vsync}) {
+  SpringSystem({@required TickerProviderStateMixin vsync}) {
     _ticker = vsync.createTicker(_tick);
   }
   // 注册的spring
@@ -19,7 +19,7 @@ class SpringSystem {
   // 存放闲置Spring的索引
   List<num> _idleSpringIndices = [];
 
-  Spring createSpring(tension, friction) {
+  Spring createSpring({double tension, double friction}) {
     SpringConfig springConfig;
     if (tension == null || friction == null) {
       springConfig = SpringConfig.defaultOrigamiSpringConfig;
@@ -32,10 +32,10 @@ class SpringSystem {
     return this.createSpringWithConfig(springConfig);
   }
 
-  Spring createSpringWithBouncinessAndSpeed(
-    bounciness,
-    speed,
-  ) {
+  Spring createSpringWithBouncinessAndSpeed({
+    double bounciness,
+    double speed,
+  }) {
     SpringConfig springConfig;
     if (bounciness == null || speed == null) {
       springConfig = SpringConfig.defaultOrigamiSpringConfig;
