@@ -111,7 +111,7 @@ class SpringSystem {
   }
 
   void dispose() {
-    _ticker?.stop(canceled: true);
+    _ticker?.dispose();
     _removeAllSpringListeners();
   }
 }
