@@ -1,13 +1,13 @@
 English | [简体中文](./README_zh-CN.md)
 
-# Rebound
+# Flutter Rebound
 
-[![pub package](https://img.shields.io/pub/v/rebound.svg)](https://pub.dartlang.org/packages/rebound)
+[![pub package](https://img.shields.io/pub/v/flutter_rebound.svg)](https://pub.dartlang.org/packages/flutter_rebound)
 
 A Flutter library that models spring dynamics and adds real world physics to your app.
 
 ## Usage
-To use this plugin, add `rebound` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
+To use this plugin, add `flutter_rebound` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
 
 
 ## Example

@@ -1,14 +1,14 @@
 [English](./README.md) | 简体中文
 
-# Rebound
+# Flutter Rebound
 
-[![pub package](https://img.shields.io/pub/v/rebound.svg)](https://pub.dartlang.org/packages/rebound)
+[![pub package](https://img.shields.io/pub/v/flutter_rebound.svg)](https://pub.dartlang.org/packages/flutter_rebound)
 
 一个Flutter库，模拟弹簧动力学，并添加现实世界的物理到您的应用程序。
 
 
 ## 使用
-要使用此插件包,请将`rebound`作为依赖项添加到您的`pubspec.yaml`文件中,详见[dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
+要使用此插件包,请将`flutter_rebound`作为依赖项添加到您的`pubspec.yaml`文件中,详见[dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
 
 
 ## 示例
