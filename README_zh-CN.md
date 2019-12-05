@@ -6,6 +6,10 @@
 
 一个Flutter库，模拟弹簧动力学，并添加现实世界的物理到您的应用程序。
 
+<div align=left>
+<img src="https://github.com/flutter-studio/rebound/blob/master/SVID_20191205_120702_1.gif" width = "280"  alt="图片名称" align=center />
+  </div>
+
 
 ## 使用
 要使用此插件包,请将`flutter_rebound`作为依赖项添加到您的`pubspec.yaml`文件中,详见[dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
