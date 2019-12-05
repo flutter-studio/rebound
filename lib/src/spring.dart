@@ -209,8 +209,8 @@ class Spring {
     _currentState.position = currentValue;
     if (!skipSetAtRest) {
       setAtRest();
-      notifyPositionUpdated(false, false);
     }
+    notifyPositionUpdated(false, false);
   }
 
   setAtRest() {
