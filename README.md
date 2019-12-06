@@ -18,7 +18,7 @@ To use this plugin, add `flutter_rebound` as a [dependency in your pubspec.yaml 
 
 ``` dart
 // Import package
-import 'package:rebound/rebound.dart';
+import 'package:flutter_rebound/flutter_rebound.dart';
 import 'package:flutter/material.dart';
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);

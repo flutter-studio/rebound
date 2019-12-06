@@ -19,7 +19,7 @@
 
 ``` dart
 // 引入包
-import 'package:rk4/rk4.dart';
+import 'package:flutter_rebound/flutter_rebound.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
