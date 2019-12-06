@@ -1,3 +1,8 @@
+## 0.3.0+1
+
+* update README
+
+
 ## 0.3.0
 
 * fix some bugs
